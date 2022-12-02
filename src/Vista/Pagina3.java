@@ -113,14 +113,19 @@ public class Pagina3 extends javax.swing.JPanel implements Runnable {
             valor = x.getHorarioInicio().compareTo(LocalTime.now());
             valor1 = x.getFechaProyeccion().compareTo(LocalDate.now());
 
-            if (valor1 == 1) {
-                jcbPelicula.addItem(x);
+            if (x.getPelicula().isEstado()) {
 
-            } else if (valor1 == 0) {
-                if (valor == 1) {
+                if (valor1 > 0) {
                     jcbPelicula.addItem(x);
+
+                } else if (valor1 == 0) {
+                    if (valor > 0) {
+                        jcbPelicula.addItem(x);
+                    }
                 }
+
             }
+
         }
 
     }
