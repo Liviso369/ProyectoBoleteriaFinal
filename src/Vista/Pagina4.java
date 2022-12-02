@@ -657,6 +657,9 @@ public class Pagina4 extends javax.swing.JPanel {
         if (mat.matches()) {
             borrarFilas();
             TraerXDni();
+        } else if (jtfDni.getText().equals("")) {
+            JOptionPane.showMessageDialog(null, "Rellene el campo Dni");
+            jtfDni.requestFocus();
         }
     }//GEN-LAST:event_jbBuscar1ActionPerformed
 

@@ -596,10 +596,9 @@ public class Pagina3 extends javax.swing.JPanel implements Runnable {
     }//GEN-LAST:event_jcbPeliculaActionPerformed
 
     private void jbGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbGuardarActionPerformed
-        if (jtfCliente.getText().equals("") || jtfMonto.getText().equals("")) {
+        if (jtfCliente.getText().equals("") || jtfMonto.getText().equals("") || jcbButaca.getSelectedItem() == null || jcbPelicula.getSelectedItem() == null) {
 
             JOptionPane.showMessageDialog(this, "Rellene todos los campos");
-
         } else {
 
             Pattern pat = Pattern.compile("^\\d{8}$");
